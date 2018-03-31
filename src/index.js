@@ -1,8 +1,16 @@
 import React from 'react';
+import { IndexRoute, Router, Route, browserHistory } from 'react-router';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+import './index.css';
+
+import App from './App';
+
+ReactDOM.render(
+  <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
+    <Route path="/" component={App}>
+      {/*<IndexRoute component={Home} />*/}
+    </Route>
+  </Router>,
+  document.getElementById('root')
+);
