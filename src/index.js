@@ -5,11 +5,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 import App from './App';
+import Home from './components/pages/Home';
 
 ReactDOM.render(
   <Router onUpdate={() => window.scrollTo(0, 0)} history={browserHistory}>
     <Route path="/" component={App}>
-      {/*<IndexRoute component={Home} />*/}
+      <IndexRoute component={Home} />
     </Route>
   </Router>,
   document.getElementById('root')
